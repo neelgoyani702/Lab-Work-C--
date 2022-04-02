@@ -1,5 +1,5 @@
 #include <iostream>
-#define PI 3.1415926535897932384626433
+#define PI 3.14
 using namespace std;
 
 // area
