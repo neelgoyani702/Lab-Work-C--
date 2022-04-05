@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
 
-struct Rectangle
+class Rectangle
 {
     int width, hight;
-    
+
+public:
     void get_vlaues();
     void area();
 };
@@ -21,7 +22,7 @@ void Rectangle::area()
 
 int main(int argc, char const *argv[])
 {
-    struct Rectangle r;
+    Rectangle r;
     r.get_vlaues();
     r.area();
 
