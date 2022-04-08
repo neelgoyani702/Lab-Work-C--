@@ -41,7 +41,6 @@ void Parent::ReadChildData(Child c)
     childName = c.name;
     childGender = c.gender;
 }
-
 void Parent::DisplayChildData()
 {
     cout << "Name of child: " << childName << endl;
