@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#define N 4
 using namespace std;
 
 class Gate
@@ -15,7 +16,9 @@ public:
     static void getCount();
 };
 
-int Gate::ECV_Cnt, ECS_Cnt, ECA_Cnt;
+int Gate::ECV_Cnt = 0;
+int Gate::ECS_Cnt = 0;
+int Gate::ECA_Cnt = 0;
 
 void Gate::getData()
 {
@@ -28,31 +31,35 @@ void Gate::getData()
 
     if (examCenter == 'V')
         ECV_Cnt++;
-    if (examCenter == 'S')
+    else if (examCenter == 'S')
         ECS_Cnt++;
-    if (examCenter == 'A')
+    else if (examCenter == 'A')
         ECA_Cnt++;
 }
 
 void Gate::getCount()
 {
-    cout << "Vadodara count: " << ECV_Cnt << endl
+    cout << endl
+         << "Vadodara count: " << ECV_Cnt << endl
          << "Surat count: " << ECS_Cnt << endl
          << "Ahmedabad count: " << ECA_Cnt << endl;
 }
 
 void Gate::putData()
 {
-    cout << "Registration no.: " << reg_no << endl;
-    cout << "Name: " << name << endl;
-    cout << "Exam Center: " << examCenter << endl;
+    cout << endl
+         << "Registration no.: " << reg_no << endl
+         << "Name: " << name << endl
+         << "Exam Center: " << examCenter << endl;
 }
 
 int main(int argc, char const *argv[])
 {
-    Gate s1, s2;
-    s1.getData();
-    s2.getData();
-    s2.getCount();
+    Gate s[N];
+    for (int i = 0; i < N; i++)
+        s[i].getData();
+    for (int i = 0; i < N; i++)
+        s[i].putData();
+    Gate::getCount();
     return 0;
 }
