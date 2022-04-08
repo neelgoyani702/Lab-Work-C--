@@ -50,8 +50,8 @@ void Parent::DisplayChildData()
 int main()
 {
     Child c;
-    Parent p;
     c.getData();
+    Parent p;
     p.ReadChildData(c);
     p.DisplayChildData();
     return 0;
