@@ -8,8 +8,8 @@ class Number
 public:
     void input();
     void output();
-    // Number operator++(void);
-    Number operator++();
+    Number operator++(void);
+    Number operator++(int);
     Number operator-();
 
     Number();
@@ -21,18 +21,18 @@ Number::Number() { num = 0; }
 Number::Number(int n) { num = n; }
 // Number::Number(Number &n) { num = n.num; }
 
-// Number Number::operator++(void)
-// {
-//     ++num;
-//     return *this;
-// }
+Number Number::operator++(void)
+{
+    ++num;
+    return *this;
+}
 
-Number Number::operator++()
+Number Number::operator++(int)
 {
     // num++;
     // return *this;
-    num++;
-    return Number(num);
+    // num++;
+    return Number(num++);
 }
 
 Number Number::operator-()
