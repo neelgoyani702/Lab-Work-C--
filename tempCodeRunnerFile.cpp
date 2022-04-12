@@ -1,7 +1,5 @@
-Time::Time(Time &t)
-// {
-//     hr = t.hr;
-//     min = t.min;
-//     sec = t.sec;
-//     format();
-// }
+Number Number::operator++(void)
+{
+    ++num;
+    return *this;
+}
