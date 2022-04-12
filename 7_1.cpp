@@ -8,29 +8,31 @@ class Number
 public:
     void input();
     void output();
-    Number operator++(void);
-    Number operator++(int);
+    // Number operator++(void);
+    Number operator++();
     Number operator-();
 
     Number();
     Number(int);
-    Number(Number &n);
+    // Number(Number &n);
 };
 
 Number::Number() { num = 0; }
 Number::Number(int n) { num = n; }
-Number::Number(Number &n) { num = n.num; }
+// Number::Number(Number &n) { num = n.num; }
 
-Number Number::operator++(void)
-{
-    ++num;
-    return *this;
-}
+// Number Number::operator++(void)
+// {
+//     ++num;
+//     return *this;
+// }
 
-Number Number::operator++(int)
+Number Number::operator++()
 {
+    // num++;
+    // return *this;
     num++;
-    return *this;
+    return Number(num);
 }
 
 Number Number::operator-()
@@ -56,7 +58,7 @@ int main()
     Number n2(5);
     Number n3 = n2;
     Number n5;
-    n5 = n2++;
+    // n5 = n2++;
     n5 = ++n2;
 
     n1.output();
