@@ -8,7 +8,6 @@ private:
 
 public:
     Complex(int r, int i);
-    ~Complex();
     void print_data();
     void operator-();
 };
@@ -17,10 +16,6 @@ Complex::Complex(int r, int i)
 {
     real = r;
     img = i;
-}
-
-Complex::~Complex()
-{
 }
 
 void Complex::print_data()
