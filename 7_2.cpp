@@ -29,7 +29,6 @@ void operator-(Complex &c)
 {
     c.real = -c.real;
     c.img = -c.img;
-    
 }
 
 int main()
