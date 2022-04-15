@@ -25,10 +25,10 @@ void String::print_data()
     cout << str << endl;
 }
 
-String String::operator+=()
+String String::operator+()
 {
 }
-bool String::operator+=()
+bool String::operator==()
 {
 }
 String String::operator+=()

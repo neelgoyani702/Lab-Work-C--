@@ -6,10 +6,12 @@ class Complex
 private:
     int real, img;
 
+    friend void operator-(Complex &c);
+
 public:
+    Complex();
     Complex(int r, int i);
     void print_data();
-    void operator-();
 };
 
 Complex::Complex(int r, int i)
@@ -20,13 +22,14 @@ Complex::Complex(int r, int i)
 
 void Complex::print_data()
 {
-    cout << real << " + " << img << " i" <<;
+    cout << real << " + " << img << " i" << endl;
 }
 
-void Complex::operator-()
+void operator-(Complex &c)
 {
-    real = -real;
-    img = -img;
+    c.real = -c.real;
+    c.img = -c.img;
+    
 }
 
 int main()
