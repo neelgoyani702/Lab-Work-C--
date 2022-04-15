@@ -9,7 +9,7 @@ private:
 public:
     Complex(int r, int i);
     void print_data();
-    void operator-();
+    friend void operator-();
 };
 
 Complex::Complex(int r, int i)
@@ -20,10 +20,10 @@ Complex::Complex(int r, int i)
 
 void Complex::print_data()
 {
-    cout << real << " + " << img << " i" << endl;
+    cout << real << " + " << img << " i" <<;
 }
 
-void Complex::operator-()
+void operator-()
 {
     real = -real;
     img = -img;
