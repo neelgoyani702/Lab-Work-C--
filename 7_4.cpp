@@ -13,8 +13,7 @@ public:
     void display();
     operator float()
     {
-        float a = t;
-        return a;
+        return t;
     }
 };
 

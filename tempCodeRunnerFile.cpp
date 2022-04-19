@@ -1,49 +1,75 @@
-// C++ program to illustrate the
-// type-conversion
 #include <bits/stdc++.h>
 using namespace std;
-
-// Time Class
-class Time {
-	int hour;
-	int mins;
+// Forward declaration of
+// destination class
+class Class_type_two;
+// Source class, i.e
+// Class which will be converted to another
+class Class_type_one
+{
+	string a = "GeeksforGeeks";
 
 public:
-	// Default Constructor
-	Time()
+	// Member function which returns
+	// string type data
+	string get_string()
 	{
-		hour = 0;
-		mins = 0;
+		return (a);
 	}
 
-	// Parameterized Constructor
-	Time(int t)
+	// Member function to display
+	void display()
 	{
-		hour = t / 60;
-		mins = t % 60;
+		cout << a << endl;
 	}
-
-	// Function to print the value
-	// of class variables
-	void Display()
-	{
-		cout << "Time = " << hour
-			<< " hrs and "
-			<< mins << " mins\n";
-	}
+	// declaration of casting
+	// operator for class conversion
+	// note that it will be of type destination class
+	operator Class_type_two();
 };
 
-// Driver Code
+// Destination class, i.e
+// class type to which source class will converted
+class Class_type_two
+{
+
+public:
+	string b;
+
+	// Member function for displaying
+	// the data assigned to b.
+	void display()
+	{
+		cout << b << endl;
+	}
+};
+// here we define our casting operator
+Class_type_one::operator Class_type_two()
+{
+	Class_type_two obj;
+	obj.b = a;
+	return obj;
+}
+
 int main()
 {
-	// Object of Time class
-	Time T1;
-	int dur = 95;
+	// Creating object of class Class_type_one
+	Class_type_one a;
 
-	// Conversion of int type to
-	// class type
-	T1 = dur;
-	T1.Display();
+	// Creating object of class Class_type_two
+	Class_type_two b;
+
+	// CLass type conversion
+	// using operator overloading
+	b = a;
+
+	// Displaying data of object
+	// of class Class_type_one
+	a.display();
+
+	// Displaying data of object
+	// of class Class_type_two
+	b.display();
 
 	return 0;
 }
