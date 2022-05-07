@@ -31,10 +31,11 @@ public:
         cout << "Enter div: " << div << endl;
     }
 
-} S[5];
+};
 
 int main()
 {
+    StuDetail S[5];
     for (int i = 0; i < 5; i++)
     {
         S[i].input();
