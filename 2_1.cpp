@@ -28,7 +28,7 @@ public:
         cout << "Name of the collage: " << name << endl;
         cout << "Collage University Code: " << code << endl;
         cout << "Name of Department: " << department << endl;
-        cout << "The deparment of " << department << " has in-take" << intake << endl;
+        cout << "The deparment of " << department << " has in-take " << intake << endl;
     }
 };
 
