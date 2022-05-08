@@ -26,19 +26,22 @@ int main()
 {
     Swap n;
     Swap s1, s2;
-    // cout << "Enter Two Numbers: ";
-    // n.inp();
+    cout << "Enter Two Numbers: ";
+    n.inp();
 
-    // cout << "Before Swap" << endl;
-    // n.print();
+    cout << "Before Swap" << endl;
+    n.print();
 
-    // n.swap();
+    n.swap();
 
-    // cout << "After Swap" << endl;
-    // n.print();
+    cout << "After Swap" << endl;
+    n.print();
 
     return 0;
 }
+
+
+//  Solution-2 
 
 // class num
 // {
