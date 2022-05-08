@@ -1,62 +1,52 @@
 #include <iostream>
 using namespace std;
-
 class Fahrenheit;
-
 class Celsius
 {
-private:
-    float cel;
+    float tempc;
 
 public:
-    Celsius() {}
-    Celsius(float f)
+    Celsius()
     {
-        cel = f;
+        tempc = 35;
     }
-    Celsius(const Celsius &c)
+    Celsius(float c)
     {
-        cel = c.cel;
+        tempc = c;
     }
-    float getCel()
+    float getc()
     {
-        return cel;
+        return tempc;
     }
-    void Display()
+    void put()
     {
-        cout << "C = " << cel << endl;
+        cout << "The Temperature in Celsius is " << tempc;
     }
 };
-
 class Fahrenheit
 {
-private:
-    float fer;
+    float tempf;
 
 public:
-    Fahrenheit() {}
-    Fahrenheit(float f)
+    Fahrenheit()
     {
-        fer = f;
+        tempf = 28;
     }
-    float getFer()
+    Fahrenheit(Celsius c)
     {
-        return fer;
+        tempf = (((9.0 / 5) * c.getc()) + 32);
     }
-    void Display()
+    void put()
     {
-        cout << "F = " << fer << endl;
+        cout << "\nThe Temperature in Fahrenheit is " << tempf;
     }
 };
-
-
 int main()
 {
-    Celsius c1 = 10, c2 = 10;
-    Fahrenheit f1, f2;
-    // f1 = c1;
-    // c2 = f2;
-    f1.Display();
-    c2.Display();
+    Celsius C1, C2 = 5.0;
+    Fahrenheit F1, F2;
+    F1 = C2;
+    C2.put();
+    F1.put();
     return 0;
 }
