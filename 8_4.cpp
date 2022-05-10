@@ -9,10 +9,12 @@ private:
 
 public:
     Hospital() {}
-    Hospital(int a, string s)
+    void getData()
     {
-        rlno = a;
-        name = s;
+        cout << "Enter roll no: ";
+        cin >> rlno;
+        cout << "Enter name: ";
+        cin >> name;
     }
     void display()
     {
@@ -28,10 +30,13 @@ private:
 
 public:
     Ward() {}
-    Ward(int w) { wno = w; }
+    void getData()
+    {
+        cout << "Enter ward no: ";
+        cin >> wno;
+    }
     void display()
     {
-        Hospital::display();
         cout << "Ward no = " << wno << endl;
     }
 };
@@ -44,10 +49,13 @@ private:
 
 public:
     Room() {}
-    Room(int a, string n)
+    void getData()
     {
-        bedno = a;
-        natureOillness = n;
+
+        cout << "Enter bed no: ";
+        cin >> bedno;
+        cout << "Enter nature of illness: ";
+        cin >> natureOillness;
     }
     void display()
     {
@@ -60,15 +68,33 @@ class Patient : public Ward, public Room
 {
 private:
 public:
+    Patient() {}
+    void getData()
+    {
+        Hospital::getData();
+        Ward::getData();
+        Room::getData();
+        cout << "------------------" << endl;
+    }
     void display()
     {
+        Hospital::display();
         Ward::display();
         Room::display();
+        cout << "------------------" << endl;
     }
 };
 
 int main()
 {
-
+    Patient p[5];
+    for (int i = 0; i < 5; i++)
+    {
+        p[i].getData();
+    }
+    for (int i = 0; i < 5; i++)
+    {
+        p[i].display();
+    }
     return 0;
 }
