@@ -30,7 +30,7 @@ int main()
     DrivedClass derived;
     bptr = &derived;
     bptr->b = 200;
-    /*bptr->d = 300;*/ // wont work
+    ((DrivedClass *)bptr)->d = 300; // wont work
     cout << "bptr now points to derived object" << endl;
     bptr->show();
     DrivedClass *dptr;
