@@ -54,25 +54,6 @@ public:
 
 int main()
 {
-    // Car c[2];
-    // Truck t[2];
-    // for (int i = 0; i < 2; i++)
-    // {
-    //     c[i].getdata();
-    // }
-    // for (int i = 0; i < 2; i++)
-    // {
-    //     t[i].getdata();
-    // }
-    // for (int i = 0; i < 2; i++)
-    // {
-    //     c[i].put_data();
-    // }
-    // for (int i = 0; i < 2; i++)
-    // {
-    //     t[i].put_data();
-    // }
-
     Car c1(20.2);
     c1.getdata();
     c1.put_data();
