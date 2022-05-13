@@ -14,7 +14,7 @@ public:
         title = t;
         price = p;
     }
-    void display()
+    virtual void display()
     {
         cout << "Title = " << title << endl;
         cout << "price = " << price << endl;
@@ -63,10 +63,14 @@ int main()
     int a1, b1;
     cin >> s1 >> a1 >> b1;
     Book b(s1, a1, b1);
+    b.display();
+
     string s2;
     int a2;
     float b2;
     cin >> s2 >> a2 >> b2;
-    Book b(s2, a2, b2);
+    Tape t(s2, a2, b2);
+    t.display();
+
     return 0;
 }
