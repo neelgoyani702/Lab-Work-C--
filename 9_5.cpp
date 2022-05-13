@@ -1,40 +1,65 @@
-#include <bits/stdc++.h>
+#include "iostream"
 using namespace std;
-
-class Vehical
+class vehicle
 {
-private:
     float avg;
 
 public:
-    virtual void getdata() = 0;
+    void virtual getdata() = 0;
     void putdata()
     {
-        cout << "Enter average: ";
-        cin >> avg;
+        cout << avg << endl;
     }
 };
-
-class Car : public Vehical
+class car : public vehicle
 {
-private:
     string fuel;
-    int ty;
+    int no_of_wheel;
 
 public:
+    void getdata()
+    {
+        cin >> fuel >> no_of_wheel;
+    }
+    void put_data()
+    {
+        cout << fuel << no_of_wheel;
+    }
 };
-
-class Truck : public Vehical
+class truck : public vehicle
 {
-private:
     string fuel;
-    int ty;
+    int no_of_wheel;
 
 public:
+    void getdata()
+    {
+        cin >> fuel >> no_of_wheel;
+    }
+    void put_data()
+    {
+        cout << fuel << no_of_wheel;
+    }
 };
-
 int main()
 {
-
+    car c[2];
+    truck t[2];
+    for (int i = 0; i < 2; i++)
+    {
+        c[i].getdata();
+    }
+    for (int i = 0; i < 2; i++)
+    {
+        t[i].getdata();
+    }
+    for (int i = 0; i < 2; i++)
+    {
+        c[i].put_data();
+    }
+    for (int i = 0; i < 2; i++)
+    {
+        t[i].put_data();
+    }
     return 0;
 }
