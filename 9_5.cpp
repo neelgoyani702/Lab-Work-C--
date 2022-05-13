@@ -1,6 +1,7 @@
-#include "iostream"
+#include <bits/stdc++.h>
 using namespace std;
-class vehicle
+
+class Vehicle
 {
     float avg;
 
@@ -11,7 +12,8 @@ public:
         cout << avg << endl;
     }
 };
-class car : public vehicle
+
+class Car : public Vehicle
 {
     string fuel;
     int no_of_wheel;
@@ -26,7 +28,8 @@ public:
         cout << fuel << no_of_wheel;
     }
 };
-class truck : public vehicle
+
+class Truck : public Vehicle
 {
     string fuel;
     int no_of_wheel;
@@ -41,10 +44,11 @@ public:
         cout << fuel << no_of_wheel;
     }
 };
+
 int main()
 {
-    car c[2];
-    truck t[2];
+    Car c[2];
+    Truck t[2];
     for (int i = 0; i < 2; i++)
     {
         c[i].getdata();
