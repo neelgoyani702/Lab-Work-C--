@@ -1,9 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int main()
 {
-    int x;
-    ifstream infile;
-    infile.open("silly.dat", ios::binary | ios::in);
-    infile.read(&x, 7); // reads 7 bytes into a cell that is either 2 or 4
+    ifstream out;
+    out.open("data3.txt");
+    //int p = out.tellp();
+    //cout << p << endl;
+    if (!out.good())
+    {
+        cout << "Cannot open file!" << endl;
+        cout << "Know bit = " << out.good();
+        //return 1;
+    }
+    return 0;
 }
