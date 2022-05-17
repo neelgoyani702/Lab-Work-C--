@@ -30,5 +30,6 @@ int main()
     {
         cout << "height = " << heightOUT[i] << endl;
     }
+    in.close();
     return 0;
 }
