@@ -3,7 +3,6 @@ using namespace std;
 
 int main()
 {
-
     ofstream out;
     out.open("data.txt");
 
