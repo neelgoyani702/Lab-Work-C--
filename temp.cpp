@@ -1,43 +1,9 @@
-#include <iostream>
-#include <cstring>
-using std::cin;
-using std::cout;
-using std::endl;
-using std::flush;
-using std::ostream;
-
-class UD_Manip
-{
-private:
-    int width, precision;
-    char fill;
-
-public:
-    UD_Manip(int W, int P, char F)
-    {
-        width = W;
-        precision = P;
-        fill = F;
-    }
-    friend ostream &operator<<(ostream &, UD_Manip);
-};
-
-ostream &operator<<(ostream &out, UD_Manip manip)
-{
-    out.width(manip.width);
-    out.precision(manip.precision);
-    out.fill(manip.fill);
-    out << flush;
-    return out;
-}
-
-UD_Manip setwpf(int w, int p, char f)
-{
-    return UD_Manip(w, p, f);
-}
-
+#include <bits/stdc++.h>
+using namespace std;
 int main()
 {
-    cout << setwpf(10, 5, '#') << 28.66565544;
-    return 0;
+    int x;
+    ifstream infile;
+    infile.open("silly.dat", ios::binary | ios::in);
+    infile.read(&x, 7); // reads 7 bytes into a cell that is either 2 or 4
 }

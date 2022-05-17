@@ -7,8 +7,8 @@ int main()
     ofstream out;
     out.open("data.txt");
 
-    string strIN;
-    getline(cin, strIN);
+    string strIN = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    // getline(cin, strIN);
     out << strIN;
 
     out.close();
